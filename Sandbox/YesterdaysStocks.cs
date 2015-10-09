@@ -22,7 +22,7 @@ namespace Sandbox
         private int _dayLength;
         private int[] _stockPricesYesterday;
 
-        public YesterdaysStocks(int minValue = 400, int maxValue = 500, int dayLength = 400)
+        public YesterdaysStocks(int minValue = 400, int maxValue = 500, int dayLength = 10)
         {
             _minValue = minValue;
             _maxValue = maxValue;
@@ -32,6 +32,7 @@ namespace Sandbox
         public void Run()
         {
             BuildStockPrices();
+            Analyze();
         }
 
         private void BuildStockPrices()
@@ -39,21 +40,29 @@ namespace Sandbox
             if (_stockPricesYesterday == null)
             {
                 _stockPricesYesterday = new int[_dayLength];
+                bool printToConsole = _dayLength < 11 ? true : false;
+                Random random = new Random();
                 for (int i = 0; i < _stockPricesYesterday.Length; i++)
                 {
-                    Random random = new Random();
                     _stockPricesYesterday[i] = random.Next(_minValue, _maxValue);
+                    if (printToConsole)
+                    {
+                        Console.WriteLine(_stockPricesYesterday[i]);
+                    }
                 }
             }
         }
 
-        private int Analyze()
+        private void Analyze()
         {
             int lowest = _maxValue;
             int lowestPosition = 0;
             int highest = _minValue;
             int highestPosition = 0;
+            int thisProfit = 0;
             int maxProfit = 0;
+            int buyAt = 0;
+            int sellAt = 0;
             for (int i = 0; i < _stockPricesYesterday.Length; i++)
             {
                 if (_stockPricesYesterday[i] < lowest)
@@ -61,13 +70,24 @@ namespace Sandbox
                     lowest = _stockPricesYesterday[i];
                     lowestPosition = i;
                 }
-                else if (_stockPricesYesterday[i] > highest)
+                if (_stockPricesYesterday[i] > highest)
                 {
                     highest = _stockPricesYesterday[i];
                     highestPosition = i;
                 }
+
+                thisProfit = highest - lowest;
+                if (thisProfit > maxProfit)
+                {
+                    maxProfit = thisProfit;
+                    buyAt = lowestPosition;
+                    sellAt = highestPosition;
+                }
+
             }
-            return maxProfit;
+            Console.WriteLine("buy at position " + buyAt);
+            Console.WriteLine("sell at position " + sellAt);
+            Console.WriteLine("max profit " + maxProfit);
         }
     }
 }
