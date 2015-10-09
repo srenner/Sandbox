@@ -58,7 +58,6 @@ namespace Sandbox
             int lowest = _maxValue;
             int lowestPosition = 0;
             int highest = _minValue;
-            int highestPosition = 0;
             int thisProfit = 0;
             int maxProfit = 0;
             int buyAt = 0;
@@ -70,18 +69,14 @@ namespace Sandbox
                     lowest = _stockPricesYesterday[i];
                     lowestPosition = i;
                 }
-                if (_stockPricesYesterday[i] > highest)
-                {
-                    highest = _stockPricesYesterday[i];
-                    highestPosition = i;
-                }
 
-                thisProfit = highest - lowest;
+                thisProfit = _stockPricesYesterday[i] - lowest;
+
                 if (thisProfit > maxProfit)
                 {
                     maxProfit = thisProfit;
                     buyAt = lowestPosition;
-                    sellAt = highestPosition;
+                    sellAt = i;
                 }
 
             }
