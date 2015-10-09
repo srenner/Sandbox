@@ -67,7 +67,7 @@ namespace Sandbox
                     highestPosition = i;
                 }
             }
-            reteurn maxProfit;
+            return maxProfit;
         }
     }
 }
