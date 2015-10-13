@@ -40,7 +40,4 @@
     <Compile Include="YesterdaysStocks.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="YesterdaysStocks\" />
-  </ItemGroup>
 </Project>
