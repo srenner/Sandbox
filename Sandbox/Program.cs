@@ -8,8 +8,10 @@ namespace Sandbox
 		{
 			Console.WriteLine ("Hello World!");
 
-			YesterdaysStocks ys = new YesterdaysStocks();
-			ys.Run();
+			//YesterdaysStocks ys = new YesterdaysStocks();
+			//ys.Run();
+
+            Simple.Print100to1();
 		}
 
 
