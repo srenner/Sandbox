@@ -11,7 +11,7 @@ namespace Sandbox
 			//YesterdaysStocks ys = new YesterdaysStocks();
 			//ys.Run();
 
-            Simple.Print100to1();
+			Simple.Print100to1();
 		}
 
 
