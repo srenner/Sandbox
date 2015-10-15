@@ -15,6 +15,17 @@ namespace Sandbox
             }
         }
 
+        /* If the same reference was passed into both parameters, x and y are the same
+         * http://www.thomaslevesque.com/2015/03/10/c-puzzle-1/
+         */ 
+        public static void OutParameterTest1(out int x, out int y)
+		{
+			x = 42;
+			y = 123;
+			Console.WriteLine("x=" + x);
+			Console.WriteLine("y=" + y);
+			Console.WriteLine(x == y);
+		}
 
     }
 }

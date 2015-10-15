@@ -9,9 +9,12 @@ namespace Sandbox
 			Console.WriteLine ("Hello World!");
 
 			//YesterdaysStocks ys = new YesterdaysStocks();
-			//ys.Run();
+			//ys.Run(); 
 
-			Simple.Print100to1();
+			//Simple.Print100to1();
+            
+            int x = 1;
+			Simple.OutParameterTest1(out x, out x);
 		}
 
 
