@@ -16,7 +16,8 @@ namespace Sandbox
             //int x = 1;
 			//Simple.OutParameterTest1(out x, out x);
             
-			ProjectEuler.Problem0001();
+			var problem1 = new Problem0001();
+			problem1.Run();
 		}
 
 
