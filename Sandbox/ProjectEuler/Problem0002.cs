@@ -22,25 +22,19 @@ namespace Sandbox
 			int sum = 0;
 			int secondMostRecent = 0;
 			int mostRecent = 1;
-			//Console.WriteLine(mostRecent);
 			int next = 2;
-
 			do
 			{
 				secondMostRecent = mostRecent;
 				mostRecent = next;
-				//Console.WriteLine(mostRecent);
 				if (mostRecent % 2 == 0)
 				{
 					sum += mostRecent;
 				}
 			}
 			while((next = secondMostRecent + mostRecent) < 4000000);
-
-
 			Console.WriteLine(sum.ToString());
 			return sum.ToString();
-
 		}
 
 	}
