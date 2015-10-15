@@ -13,8 +13,10 @@ namespace Sandbox
 
 			//Simple.Print100to1();
             
-            int x = 1;
-			Simple.OutParameterTest1(out x, out x);
+            //int x = 1;
+			//Simple.OutParameterTest1(out x, out x);
+            
+			ProjectEuler.Problem0001();
 		}
 
 
