@@ -16,12 +16,11 @@ namespace Sandbox
             //int x = 1;
 			//Simple.OutParameterTest1(out x, out x);
             
-			var problem1 = new Problem0001();
-			problem1.Run();
+			var problem2 = new Problem0002();
+			System.Windows.Forms.Clipboard.Clear();
+            System.Windows.Forms.Clipboard.SetText(problem2.Run());
 		}
 
-
-
-
+        
 	}
 }
