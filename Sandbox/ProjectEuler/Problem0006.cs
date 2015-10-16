@@ -22,12 +22,6 @@ namespace Sandbox
 			{
 				sumOfSquare = sumOfSquare + i * i;
 			}
-
-			//Console.WriteLine(squareOfSum);
-
-			//Console.WriteLine(sumOfSquare);
-
-
 			return (squareOfSum - sumOfSquare).ToString();
 		}
 	}
