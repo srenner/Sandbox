@@ -16,9 +16,14 @@ namespace Sandbox
             //int x = 1;
 			//Simple.OutParameterTest1(out x, out x);
             
-			var problem3 = new Problem0003();
-			System.Windows.Forms.Clipboard.Clear();
-            System.Windows.Forms.Clipboard.SetText(problem3.Run());
+			var before = DateTime.Now;
+            
+			var problem4 = new Problem0004();
+			Console.WriteLine(problem4.Run());
+            
+			var after = DateTime.Now;
+            
+			Console.WriteLine((after - before).TotalSeconds);
 		}
 
         
