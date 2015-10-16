@@ -18,8 +18,8 @@ namespace Sandbox
             
 			var before = DateTime.Now;
             
-			var problem4 = new Problem0004();
-			Console.WriteLine(problem4.Run());
+			var euler = new Problem0005();
+			Console.WriteLine(euler.Run());
             
 			var after = DateTime.Now;
             
