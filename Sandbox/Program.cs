@@ -18,7 +18,7 @@ namespace Sandbox
             
 			var before = DateTime.Now;
             
-			var euler = new Problem0005();
+			var euler = new Problem0006();
 			Console.WriteLine(euler.Run());
             
 			var after = DateTime.Now;
