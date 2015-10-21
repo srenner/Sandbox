@@ -47,6 +47,8 @@
     <Compile Include="ProjectEuler\Problem0004.cs" />
     <Compile Include="ProjectEuler\Problem0005.cs" />
     <Compile Include="ProjectEuler\Problem0006.cs" />
+    <Compile Include="ProjectEuler\PrimeUtils.cs" />
+    <Compile Include="ProjectEuler\Problem0007.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
